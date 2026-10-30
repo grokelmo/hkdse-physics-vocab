@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>物理概念詞彙練習（重設計草稿）· 曾sir</title>
+<title>物理概念詞彙練習</title>
 <meta name="robots" content="noindex" />
 <!-- DRAFT — 非出街版。KaTeX CDN + offline fallback. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
@@ -172,10 +172,6 @@ main{max-width:980px;margin:0 auto;padding:20px 16px 48px}
 .glossary-card .star{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;
   background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:.8rem;font-weight:700}
 
-.draft-banner{
-  background:#fff7ed;color:#9a3412;border-bottom:2px solid #fed7aa;
-  text-align:center;font-weight:800;padding:8px 12px;font-size:.92rem;
-}
 .opt .letter{font-weight:800;color:var(--accent2);min-width:1.4em}
 .q-label{display:inline-block;background:var(--soft);color:var(--accent2);
   border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:800;margin-right:8px}
@@ -196,12 +192,10 @@ main{max-width:980px;margin:0 auto;padding:20px 16px 48px}
 </style>
 </head>
 <body>
-<div class="draft-banner">重設計草稿 · 非正式出街版 · 公式表物理量（齊定義＋公式＋單位）</div>
 <header class="app-header">
   <div class="top">
     <div>
       <h1 id="title">物理概念詞彙練習</h1>
-      <div class="sub" id="subtitle">HKDSE Physics · 曾sir</div>
     </div>
     <button type="button" class="lang-toggle" id="langBtn" aria-label="Language">中 / EN</button>
   </div>
@@ -1456,7 +1450,6 @@ function checkAnswers(){
 function applyLang(){
   const zh = lang === "zh";
   document.getElementById("title").textContent = zh ? "物理概念詞彙練習" : "Physics Concept Vocabulary";
-  document.getElementById("subtitle").textContent = zh ? "HKDSE Physics · 曾sir" : "HKDSE Physics · Sir Tsang";
   document.getElementById("searchLabel").textContent = zh ? "輸入物理概念／詞彙（中或英）" : "Enter a physics concept / term (ZH or EN)";
   document.getElementById("q").placeholder = zh ? "例如：動能、電流、electric field…" : "e.g. kinetic energy, current, 電場…";
   const btnSC = document.getElementById("btnStudyCard");
